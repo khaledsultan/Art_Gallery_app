@@ -5,23 +5,19 @@ import Image from "next/image";
 import Spotlight from "../Spotlight/Spotlight";
 
 export default function ArtPieces({ pieces }) {
-  return (
-    <>
-      {pieces.map((piece, index) => (
-        <Spotlight
-          key={index}
-          image={piece.imageSource}
-          artist={piece.artist}
-        />
-      ))}
-      {pieces.map((piece, index) => (
-        <ArtPiecePreview
-          key={index}
-          image={piece.imageSource}
-          title={piece.name}
-          artist={piece.artist}
-        />
-      ))}
-    </>
-  );
+    return (
+        <>
+            <ul>
+                {pieces.map((piece, index) => (
+                    <li key={index}>
+                        <ArtPiecePreview
+                            image={piece.imageSource}
+                            title={piece.name}
+                            artist={piece.artist}
+                        />
+                    </li>
+                ))}
+            </ul>
+        </>
+    );
 }
