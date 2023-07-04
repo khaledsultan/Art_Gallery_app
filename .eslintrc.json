@@ -9,7 +9,8 @@
       {
         "allowObject": true
       }
-    ]
+    ],
+    "indent": ["error", 4]
   },
   "plugins": ["jest"]
 }
