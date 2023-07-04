@@ -9,7 +9,7 @@ const piece = {
 };
 
 test("renders a list", () => {
-    render(<ArtPieces pieces={piece} />);
+    render(<ArtPieces pieces={[piece]} />);
     const ulElement = screen.getByRole("list");
     expect(ulElement).toBeInTheDocument();
 });
