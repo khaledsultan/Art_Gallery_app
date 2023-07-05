@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Navigation() {
     return (
         <nav>
-            <a href="./">HOME PAGE</a> <a href="./art-pieces">ALL PIECES</a>
+            <Link href="/">HOME PAGE</Link> |{" "}
+            <Link href="/art-pieces">ALL PIECES</Link>
         </nav>
     );
 }
