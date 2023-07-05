@@ -4,7 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Spotlight from "../Spotlight/Spotlight";
 
-export default function ArtPieces({ pieces }) {
+export default function ArtPieces({
+    pieces,
+    onToggleFavorite,
+    isFavorite,
+    artPiecesInfo,
+}) {
+    console.log({ pieces });
+
     return (
         <>
             <ul>
@@ -15,6 +22,8 @@ export default function ArtPieces({ pieces }) {
                             title={piece.name}
                             artist={piece.artist}
                             slug={piece.slug}
+                            onToggleFavorite={onToggleFavorite}
+                            isFavorite={piece.isFavorite}
                         />
                     </li>
                 ))}
