@@ -23,6 +23,7 @@ export default function OnePiece({ data }) {
                 artist={thePiece.artist}
                 year={thePiece.year}
                 genre={thePiece.genre}
+                slug={thePiece.slug}
             />
         </>
     );
