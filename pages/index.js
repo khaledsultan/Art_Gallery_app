@@ -1,10 +1,11 @@
 import ArtPieces from "../components/ArtPieces/ArtPieces";
 import Spotlight from "../components/Spotlight/Spotlight";
 
-export default function SpotlightPage({ data }) {
-    if (!data) {
-        return;
-    }
+export default function SpotlightPage({
+    data,
+    artPiecesInfo,
+    onToggleFavorite,
+}) {
     function pickRandomImage() {
         const newIndex = Math.floor(Math.random() * data.length);
         console.log({ newIndex });
@@ -13,15 +14,16 @@ export default function SpotlightPage({ data }) {
     }
     const randomImage = pickRandomImage();
 
-    console.log({ randomImage });
+    // console.log({ randomImage });
     return (
         <>
             <Spotlight
                 image={randomImage.imageSource}
                 artist={randomImage.artist}
+                slug={randomImage.slug}
+                artPiecesInfo={artPiecesInfo}
+                onToggleFavorite={onToggleFavorite}
             />
-
-            {/* <ArtPieces pieces={data} /> */}
         </>
     );
 }
