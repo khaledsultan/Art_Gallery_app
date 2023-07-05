@@ -7,7 +7,7 @@ export default function SpotlightPage({ data }) {
     }
     function pickRandomImage() {
         const newIndex = Math.floor(Math.random() * data.length);
-        console.log(newIndex);
+        console.log({ newIndex });
 
         return data[newIndex];
     }

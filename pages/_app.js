@@ -25,8 +25,8 @@ export default function App({ Component, pageProps }) {
             <Component
                 {...pageProps}
                 data={data}
-                isFavorite={isFavorite}
-                onToggleFavorite={onToggleFavorite}
+                // isFavorite={isFavorite}
+                // onToggleFavorite={onToggleFavorite}
             />
         </>
     );
